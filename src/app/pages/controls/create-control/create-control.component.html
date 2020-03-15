@@ -1,0 +1,48 @@
+<div class="col-lg-6">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Perfil de atleta</h4>
+            <h6 class="card-subtitle">Acá puedes ver tu información de atleta y actualizar tus datos</h6>
+            <form [formGroup]="form" (submit)="guardarAtleta()" class="form p-t-20">
+                <div class="form-group">
+                    <label for="exampleInputuname">Peso</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="ti-user"></i></div>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            formControlName="peso"
+                            placeholder="Ingrese su peso"
+                        >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Estatura</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="ti-email"></i></div>
+                        <input 
+                            type="email" 
+                            class="form-control" 
+                            formControlName="estatura" 
+                            placeholder="Ingrese su estatura"
+                        >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Porcentaje grasa corporal</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="ti-email"></i></div>
+                        <input 
+                            type="email" 
+                            class="form-control" 
+                            formControlName="grasaCorporal" 
+                            placeholder="Ingrese su % grasa corporal"
+                        >
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Guardar</button>
+                <button type="submit" class="btn btn-inverse waves-effect waves-light">Reiniciar</button>
+            </form>
+        </div>
+    </div>
+</div>

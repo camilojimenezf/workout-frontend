@@ -18,7 +18,6 @@ export class RegisterComponent implements OnInit {
   forma:FormGroup;
 
   constructor(
-    //public _usuarioService: UsuarioService,
     public router: Router,
     private uiService: UiService,
     private userService: UserService
@@ -103,7 +102,6 @@ export class RegisterComponent implements OnInit {
     this.userService.crearUser(usuario).subscribe(
       response => {
         console.log(response);
-        this.router.navigate(['/panel']);
       }
     ); 
   }

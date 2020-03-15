@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user/user.service';
+import { infoUser } from '../../models/interfaces';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  public infoUser: infoUser;
+  public role: string;
+
+  constructor(
+    private userService: UserService
+  ) { }
 
   ngOnInit() {
+    this.infoUser = this.userService.getInfoUser();
+    this.role = this.userService.getRole();
+    console.log(this.role);
   }
 
 }

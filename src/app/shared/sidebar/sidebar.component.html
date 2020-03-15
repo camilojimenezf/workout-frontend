@@ -8,23 +8,46 @@
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
                 <li class="user-profile">
-                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWlEwIxnbpUOVZKitE7g7Bg_OUtYUy9Etc6BEfxF_S0z2VmeWy&s" alt="user" /><span class="hide-menu">NOMBRE USER </span></a>
+                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWlEwIxnbpUOVZKitE7g7Bg_OUtYUy9Etc6BEfxF_S0z2VmeWy&s" alt="user" /><span class="hide-menu">{{infoUser.name}} {{infoUser.surname}} </span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a >Perfil </a></li>
-                        <li><a href="javascript:void()">My Balance</a></li>
-                        <li><a href="javascript:void()">Inbox</a></li>
-                        <li><a >Account Setting</a></li>
+                        <li *ngIf="role === 'TRAINER'" [routerLink]="['profile-trainer']" routerLinkActive="active" >
+                            <a class="pointer">Perfil </a>
+                        </li>
+                        <li *ngIf="role === 'ATHLETE'" [routerLink]="['profile-athlete']" routerLinkActive="active" >
+                            <a class="pointer">Perfil </a>
+                        </li>
                         <li><a class="pointer">Logout</a></li>
                     </ul>
                 </li>
                 <li class="nav-devider"></li>
                 <li class="nav-small-cap">PERSONAL</li>
-  
-                <li> 
-  
+
+                <li *ngIf="role === 'TRAINER'"> 
                     <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
-                      <i class="mdi mdi-gauge"></i> <!--mdi mdi-folder-lock-open-->
-                      <span class="hide-menu">Menu 1
+                      <i class="mdi mdi-account-multiple"></i> <!--mdi mdi-folder-lock-open-->
+                      <span class="hide-menu">Atletas
+                          <span class="label label-rouded label-themecolor pull-right">
+                              2
+                          </span>
+                      </span>
+                    </a>
+                </li>
+
+                <li *ngIf="role === 'ATHLETE'"> 
+                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+                      <i class="mdi mdi-account-multiple"></i> <!--mdi mdi-folder-lock-open-->
+                      <span class="hide-menu">Entrenadores
+                          <span class="label label-rouded label-themecolor pull-right">
+                              2
+                          </span>
+                      </span>
+                    </a>
+                </li>
+
+                <li> 
+                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+                      <i class="mdi mdi-content-paste"></i> <!--mdi mdi-folder-lock-open-->
+                      <span class="hide-menu">Rutinas
                           <span class="label label-rouded label-themecolor pull-right">
                               2
                           </span>
@@ -32,14 +55,75 @@
                     </a>
   
                     <ul aria-expanded="false" class="collapse">
-                      <li>
-                        <a >Submenu 1 </a>
+                      <li [routerLink]="['routines']" routerLinkActive="active"  class="pointer">
+                        <a >Ver rutinas </a>
                       </li>
-                      <li>
-                        <a >Submenu 2 </a>
+                      <li [routerLink]="['create-routine']" routerLinkActive="active"  class="pointer">
+                        <a >Crear rutina </a>
                       </li>
                     </ul>
+                </li>
+
+                <li> 
+                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+                      <i class="mdi mdi-human"></i> <!--mdi mdi-folder-lock-open-->
+                      <span class="hide-menu">Controles
+                          <span class="label label-rouded label-themecolor pull-right">
+                              2
+                          </span>
+                      </span>
+                    </a>
   
+                    <ul aria-expanded="false" class="collapse">
+                      <li [routerLink]="['controls']" routerLinkActive="active"  class="pointer">
+                        <a >Ver controles </a>
+                      </li>
+                      <li [routerLink]="['create-control']" routerLinkActive="active"  class="pointer">
+                        <a >Crear control </a>
+                      </li>
+                    </ul>
+                </li>
+
+                <li> 
+                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+                      <i class="mdi mdi-dumbbell"></i> <!--mdi mdi-folder-lock-open-->
+                      <span class="hide-menu">Entrenamientos
+                          <span class="label label-rouded label-themecolor pull-right">
+                              2
+                          </span>
+                      </span>
+                    </a>
+  
+                    <ul aria-expanded="false" class="collapse">
+                      <li class="pointer">
+                        <a >Ver entrenamientos </a>
+                      </li>
+                      <li class="pointer">
+                        <a >Crear entrenamientos </a>
+                      </li>
+                    </ul>
+                </li>
+
+                <li> 
+                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+                      <i class="mdi mdi-calendar"></i> <!--mdi mdi-folder-lock-open-->
+                      <span class="hide-menu">Planificación
+                          <span class="label label-rouded label-themecolor pull-right">
+                              2
+                          </span>
+                      </span>
+                    </a>
+                </li>
+
+                <li> 
+                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+                      <i class="mdi mdi-credit-card-multiple"></i> 
+                      <span class="hide-menu">Planes
+                          <span class="label label-rouded label-themecolor pull-right">
+                              2
+                          </span>
+                      </span>
+                    </a>
                 </li>
                
             </ul>

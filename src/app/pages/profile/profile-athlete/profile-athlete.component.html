@@ -1,0 +1,25 @@
+<div class="row">
+
+    <div class="col-lg-6">
+        <app-form-user></app-form-user>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <h3>Nivel : {{atleteData?.level}}</h3>
+                        <h6 class="card-subtitle">Puntos de atleta: {{atleteData?.points}}</h6></div>
+                    <div class="col-12">
+                        <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" [ngStyle]="{'width': atleteData?.points+'%'}" style="height: 6px;" [attr.aria-valuenow]="atleteData?.points" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
