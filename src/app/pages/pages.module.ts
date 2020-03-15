@@ -15,6 +15,7 @@ import { FormUserComponent } from './profile/form-user/form-user.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CreateControlComponent } from './controls/create-control/create-control.component';
 import { ListControlsComponent } from './controls/list-controls/list-controls.component';
+import { PlanificationComponent } from './planification/planification.component';
 
 
 
@@ -29,6 +30,7 @@ import { ListControlsComponent } from './controls/list-controls/list-controls.co
         FormUserComponent,
         CreateControlComponent,
         ListControlsComponent,
+        PlanificationComponent,
     ],
     exports:[
         DashboardComponent,

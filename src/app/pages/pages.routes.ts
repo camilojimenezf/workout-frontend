@@ -6,6 +6,7 @@ import { ProfileAthleteComponent } from './profile/profile-athlete/profile-athle
 import { ProfileTrainerComponent } from './profile/profile-trainer/profile-trainer.component';
 import { CreateControlComponent } from './controls/create-control/create-control.component';
 import { ListControlsComponent } from './controls/list-controls/list-controls.component';
+import { PlanificationComponent } from './planification/planification.component';
                     
 
 const pagesRoutes:Routes =[
@@ -37,6 +38,10 @@ const pagesRoutes:Routes =[
     {
         path: 'controls',
         component: ListControlsComponent
+    },
+    {
+        path: 'planification',
+        component: PlanificationComponent
     },
     {path:'',redirectTo:('dashboard'),pathMatch:'full'},
 ];

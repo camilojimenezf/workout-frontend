@@ -1,1 +1,30 @@
-<p>list-controls works!</p>
+<div class="col-12">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Lista de mis Controles</h4>
+            <h6 class="card-subtitle">Acá puedes ver tu historial de controles, para medir tu progreso</h6>
+            <div class="table-responsive">
+                <table class="table color-table success-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Peso</th>
+                            <th>Estatura</th>
+                            <th>Grasa corporal</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let profile of profiles; index as i">
+                            <td>{{i+1}}</td>
+                            <td>{{profile.weight}} Kg</td>
+                            <td>{{profile.height}} Cms</td>
+                            <td>{{profile.body_fat}} %</td>
+                            <td>{{profile.created_at}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
