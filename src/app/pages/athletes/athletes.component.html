@@ -1,0 +1,36 @@
+<div class="col-12">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Lista de Atletas</h4>
+            <h6 class="card-subtitle">Acá puedes ver todos los atletas que entrenan con Workout</h6>
+            <div class="table-responsive">
+                <table class="table color-table success-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Teléfono</th>
+                            <th>Puntos</th>
+                            <th>Nivel</th>
+                            <th>Contactar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let athlete of athletes; index as i">
+                            <td>{{i+1}}</td>
+                            <td>{{athlete.athleteName}}</td>
+                            <td>{{athlete.athleteEmail}}</td>
+                            <td>{{athlete.athletePhone}}</td>
+                            <td>{{athlete.points}}</td>
+                            <td>{{athlete.level}}</td>
+                            <td>
+                                <button class="btn btn-primary">Contactar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

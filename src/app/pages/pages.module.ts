@@ -16,6 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CreateControlComponent } from './controls/create-control/create-control.component';
 import { ListControlsComponent } from './controls/list-controls/list-controls.component';
 import { PlanificationComponent } from './planification/planification.component';
+import { TrainersComponent } from './trainers/trainers.component';
+import { AthletesComponent } from './athletes/athletes.component';
 
 
 
@@ -31,6 +33,8 @@ import { PlanificationComponent } from './planification/planification.component'
         CreateControlComponent,
         ListControlsComponent,
         PlanificationComponent,
+        TrainersComponent,
+        AthletesComponent,
     ],
     exports:[
         DashboardComponent,
