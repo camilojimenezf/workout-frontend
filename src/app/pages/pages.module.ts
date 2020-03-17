@@ -18,6 +18,9 @@ import { ListControlsComponent } from './controls/list-controls/list-controls.co
 import { PlanificationComponent } from './planification/planification.component';
 import { TrainersComponent } from './trainers/trainers.component';
 import { AthletesComponent } from './athletes/athletes.component';
+import { CreateTrainingComponent } from './training/create-training/create-training.component';
+import { ListTrainingsComponent } from './training/list-trainings/list-trainings.component';
+import { PlanesComponent } from './planes/planes.component';
 
 
 
@@ -35,6 +38,9 @@ import { AthletesComponent } from './athletes/athletes.component';
         PlanificationComponent,
         TrainersComponent,
         AthletesComponent,
+        CreateTrainingComponent,
+        ListTrainingsComponent,
+        PlanesComponent,
     ],
     exports:[
         DashboardComponent,

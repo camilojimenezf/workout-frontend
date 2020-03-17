@@ -15,3 +15,11 @@ export interface AthleteData {
     level: string,
     points: number
 }
+
+export interface TrainerData {
+    id: number,
+    user_id: number,
+    certification: string,
+    score: number,
+    description: string
+}

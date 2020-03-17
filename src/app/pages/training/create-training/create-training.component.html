@@ -1,9 +1,9 @@
 <div class="col-lg-6">
     <div class="card">
         <div class="card-body">
-            <h4 class="card-title">Información de la rutina</h4>
-            <h6 class="card-subtitle">Cree una nueva rutina para usarla con sus atletas!</h6>
-            <form [formGroup]="form" (submit)="guardarRutina()" class="form p-t-20">
+            <h4 class="card-title">Información del entrenamiento</h4>
+            <h6 class="card-subtitle">Cree un nuevo entrenamiento para poner a prueba sus atletas!</h6>
+            <form [formGroup]="form" (submit)="guardarEntrenamiento()" class="form p-t-20">
                 <div class="form-group">
                     <label for="exampleInputuname">Titulo</label>
                     <div class="input-group">
@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Periodo de uso (días)</label>
+                    <label for="exampleInputEmail1">Duración (minutos)</label>
                     <div class="input-group">
                         <div class="input-group-addon"><i class="ti-email"></i></div>
                         <input 
@@ -46,35 +46,13 @@
                         Ingrese un valor mayor a 0
                     </div>
                 </div>
+
+                              
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Frecuencia (por semana)</label>
-                    <div class="input-group">
-                        <div class="input-group-addon"><i class="ti-email"></i></div>
-                        <input 
-                            type="text" 
-                            class="form-control" 
-                            formControlName="frecuencia" 
-                            placeholder="Ingrese frecuencia..."
-                        >
-                    </div>
-                    <div 
-                        class="form-control-feedback text-danger" 
-                        *ngIf="form.get('frecuencia').invalid && form.get('frecuencia').touched"
-                    >
-                        Ingrese un valor entre 1 y 7
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Objetivo</label>
-                    <div class="input-group">
-                        <div class="input-group-addon"><i class="ti-email"></i></div>
-                        <input 
-                            type="text" 
-                            class="form-control" 
-                            formControlName="objetivo" 
-                            placeholder="Ingrese objetivo..."
-                        >
-                    </div>
+                    <select name="role" fromControlName="role" (change)="changeRoutine($event)" class="form-control" required>
+                        <option value="">Elegir rutina...</option>
+                        <option *ngFor="let routine of routines" [value]="routine.id">{{routine.title}}</option>
+                    </select>
                 </div>
     
                 <button *ngIf="mode==='CREAR'" type="submit" [disabled]="form.invalid" class="btn btn-success waves-effect waves-light m-r-10">Guardar</button>

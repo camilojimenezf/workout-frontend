@@ -9,23 +9,19 @@
                         <tr>
                             <th>#</th>
                             <th>Nombre</th>
-                            <th>Email</th>
-                            <th>Teléfono</th>
-                            <th>Puntos</th>
-                            <th>Nivel</th>
-                            <th>Contactar</th>
+                            <th>Precio</th>
+                            <th>Creado el</th>
+                            <th>Contratar</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let athlete of athletes; index as i">
+                        <tr *ngFor="let plan of plans; index as i">
                             <td>{{i+1}}</td>
-                            <td>{{athlete.athleteName}}</td>
-                            <td>{{athlete.athleteEmail}}</td>
-                            <td>{{athlete.athletePhone}}</td>
-                            <td>{{athlete.points}}</td>
-                            <td>{{athlete.level}}</td>
+                            <td>{{plan.name}}</td>
+                            <td>{{plan.price}}</td>
+                            <td>{{plan.created_at}}</td>
                             <td>
-                                <button (click)="enviarMensaje(athlete)" class="btn btn-primary">Contactar</button>
+                                <button class="btn btn-primary">Contratar</button>
                             </td>
                         </tr>
                     </tbody>

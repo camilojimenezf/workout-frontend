@@ -9,6 +9,9 @@ import { ListControlsComponent } from './controls/list-controls/list-controls.co
 import { PlanificationComponent } from './planification/planification.component';
 import { TrainersComponent } from './trainers/trainers.component';
 import { AthletesComponent } from './athletes/athletes.component';
+import { CreateTrainingComponent } from './training/create-training/create-training.component';
+import { ListTrainingsComponent } from './training/list-trainings/list-trainings.component';
+import { PlanesComponent } from './planes/planes.component';
                     
 
 const pagesRoutes:Routes =[
@@ -19,6 +22,10 @@ const pagesRoutes:Routes =[
     },
     {
         path:'create-routine',
+        component: CreateRoutineComponent
+    },
+    {
+        path:'create-routine/:id',
         component: CreateRoutineComponent
     },
     {
@@ -52,6 +59,18 @@ const pagesRoutes:Routes =[
     {
         path: 'athletes',
         component: AthletesComponent
+    },
+    {
+        path:'create-training',
+        component: CreateTrainingComponent
+    },
+    {
+        path:'trainings',
+        component: ListTrainingsComponent
+    },
+    {
+        path:'plans',
+        component: PlanesComponent
     },
     {path:'',redirectTo:('dashboard'),pathMatch:'full'},
 ];
