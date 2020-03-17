@@ -27,7 +27,7 @@
                             <td>{{trainer.description}}</td>
                             <td>{{trainer.score}}</td>
                             <td>
-                                <button class="btn btn-primary">Contactar</button>
+                                <button (click)="enviarMensaje(trainer)" class="btn btn-primary">Contactar</button>
                             </td>
                         </tr>
                     </tbody>

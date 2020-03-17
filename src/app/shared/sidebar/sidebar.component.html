@@ -64,7 +64,7 @@
                     </ul>
                 </li>
 
-                <li> 
+                <li *ngIf="role === 'ATHLETE'"> 
                     <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
                       <i class="mdi mdi-human"></i> <!--mdi mdi-folder-lock-open-->
                       <span class="hide-menu">Controles
@@ -95,10 +95,10 @@
                     </a>
   
                     <ul aria-expanded="false" class="collapse">
-                      <li class="pointer">
+                      <li [routerLink]="['trainings']" routerLinkActive="active"  class="pointer">
                         <a >Ver entrenamientos </a>
                       </li>
-                      <li class="pointer">
+                      <li [routerLink]="['create-training']" routerLinkActive="active"  class="pointer">
                         <a >Crear entrenamientos </a>
                       </li>
                     </ul>
@@ -115,8 +115,8 @@
                     </a>
                 </li>
 
-                <li> 
-                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+                <li [routerLink]="['plans']" routerLinkActive="active" > 
+                    <a class="has-arrow waves-effect waves-dark" aria-expanded="false">
                       <i class="mdi mdi-credit-card-multiple"></i> 
                       <span class="hide-menu">Planes
                           <span class="label label-rouded label-themecolor pull-right">

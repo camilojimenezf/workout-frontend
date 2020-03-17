@@ -10,28 +10,24 @@
                             <th>#</th>
                             <th>Titulo</th>
                             <th>Descripción</th>
-                            <th>Periodo de uso (días)</th>
-                            <th>Frecuencia (por semana)</th>
-                            <th>Objetivos</th>
+                            <th>Duración (minutos)</th>
                             <th>Editar</th>
                             <th>Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let routine of routines; index as i">
+                        <tr *ngFor="let training of trainings; index as i">
                             <td>{{i+1}}</td>
-                            <td>{{routine.title}}</td>
-                            <td>{{routine.description}}</td>
-                            <td>{{routine.duration}}</td>
-                            <td>{{routine.frequency}}</td>
-                            <td>{{routine.goal}}</td>
+                            <td>{{training.title}}</td>
+                            <td>{{training.description}}</td>
+                            <td>{{training.duration}}</td>
                             <td>
-                                <button [routerLink]="['/panel/create-routine', routine.id]" class="btn btn-secondary">
+                                <button [routerLink]="['/panel/create-training', training.id]" class="btn btn-secondary">
                                     Editar
                                 </button>
                             </td>
                             <td>
-                                <button (click)="eliminarRutina(routine.id)" class="btn btn-danger">
+                                <button (click)="eliminarEntrenamiento(training.id)" class="btn btn-danger">
                                     Eliminar
                                 </button>
                             </td>

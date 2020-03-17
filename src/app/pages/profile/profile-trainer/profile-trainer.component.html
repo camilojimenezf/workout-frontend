@@ -1,1 +1,57 @@
-<p>profile-trainer works!</p>
+<div class="row">
+    
+    <div class="col-lg-6">
+        <app-form-user></app-form-user>
+    </div>
+    
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Información de entrenador</h4>
+                <h6 class="card-subtitle">Tus información profesional</h6>
+                <form [formGroup]="form" (submit)="guardarTrainer()" class="form p-t-20">
+                    <div class="form-group">
+                        <label for="exampleInputuname">Certificado</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input 
+                                type="text" 
+                                class="form-control" 
+                                formControlName="certificado"
+                                placeholder="Ingrese su certificado..."
+                            >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputuname">Puntaje</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input 
+                                type="text" 
+                                class="form-control" 
+                                formControlName="puntaje"
+                                placeholder="Ingrese su puntaje..."
+                                disabled
+                            >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Descripción</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-email"></i></div>
+                            <input 
+                                type="text" 
+                                class="form-control" 
+                                formControlName="descripcion" 
+                                placeholder="Ingrese su descripción"
+                            >
+                        </div>
+                    </div>
+        
+                    <button type="submit" [disabled]="form.invalid" class="btn btn-success waves-effect waves-light m-r-10">Guardar</button>
+                    <button type="submit" class="btn btn-inverse waves-effect waves-light">Reiniciar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
