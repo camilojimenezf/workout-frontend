@@ -21,6 +21,26 @@ export class AthleteService {
     this.token = this.userService.getToken();
   }
 
+  getAthletes() {
+    let url = this.baseUrl + 'athletes';
+    return this.http.get(url).pipe(
+      map( (resp:any) => {
+        console.log(resp);
+        const athletesData = resp.data
+        const athletes = athletesData.map( athlete => {
+          return  {user_id: athlete.user_id,
+                  level: athlete.level,
+                  points: athlete.points,
+                  id: athlete.id,
+                  athleteName: athlete.user.name,
+                  athleteEmail: athlete.user.email,
+                  athletePhone: athlete.user.phone}
+        })
+        return athletes;
+      })
+    )
+  }
+
   getAthleteByUser(userId) {
     let url = this.baseUrl + `users/${userId}/athletes`;
     let headers = new HttpHeaders().set('Authorization', this.token);
