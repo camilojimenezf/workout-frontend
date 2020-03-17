@@ -1,0 +1,142 @@
+.idTituloMenu{
+    font-weight: 700;
+    font-size: 30px;
+    padding-top: 0cm;
+    margin-top: 10px;
+    margin-left: -66px;
+    }
+
+
+
+.container2{
+    padding-top:3cm;
+    font-weight: 700;
+    font-size: 62px;
+    text-align: center;
+    color: rgba(255, 238, 0, 0.796);
+
+}
+.container3{
+
+    font-weight: 700;
+    text-align: center;
+    font-size:20px;
+    color: rgba(255, 255, 255, 0.782);
+}
+.container3b{
+
+    font-weight: 700;
+    text-align: center;
+    font-size:20px;
+    color: rgba(0, 0, 0, 0.782);
+}
+
+.container4{
+    font-size:62px;
+    font-weight: 700;
+    text-align:center;
+    color: rgba(208, 194, 2, 0.959);
+}
+.divider{
+    width: 80px;
+    height: 3px;
+    padding: 0;
+    margin: 27px auto 34px;
+    background: #d9d9d9;
+    border: none;
+    background: #d01919;
+    fill: #d01919;
+}
+
+
+.box-icon .icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.icon-sm.icon-rect, .icon-sm.icon-rounded, .icon-sm.icon-circle, .icon-sm.icon-outlined {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 40px;
+}
+html *:first-child {
+    margin-top: 0;
+}
+.icon-dark-filled {
+    background: linear-gradient(45deg, #191919 0%, #434345 100%);
+}
+.icon-darker-filled, .icon-darkest-filled, .icon-dark-filled, .icon-shark-filled, .icon-mantis-filled, .icon-pink-filled, .icon-malibu-filled, .icon-carrot-filled, .icon-red-filled, .icon-blue-gray-filled {
+    color: #fff;
+    border: none;
+}
+.icon-sm {
+    font-size: 42px;
+    line-height: 42px;
+}
+.icon-outlined, .icon-outlined:after {
+    border-radius: 50%;
+}
+.icon-outlined {
+    position: relative;
+}
+.icon-rect, .icon-circle, .icon-rounded, .icon-outlined {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    line-height: 70px;
+    text-align: center;
+    border: 2px solid;
+}
+
+.icon {
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 56px;
+    font-style: normal;
+}
+.mdi {
+    display: inline-block;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Material Design Icons";
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+* {
+    box-sizing: border-box;
+}
+.icon-outlined:after {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    bottom: -7px;
+    left: -7px;
+    content: '';
+    border: 2px solid #f5f5f5;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}html *:last-child {
+    margin-bottom: 0;
+}
+html *:first-child {
+    margin-top: 0;
+}
+.box-icon-bordered {
+    border: 2px solid #f2f2f2;
+}
+.box-icon {
+    position: relative;
+    padding: 42px 25px 27px 25px;
+}
+* {
+    box-sizing: border-box;
+}
