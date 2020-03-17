@@ -44,9 +44,9 @@
                 (forma.get('password2').touched || forma.get('password2').dirty))">
                     <p class="text-danger">Las contraseñas deben ser iguales</p>
                 </div>
-
+              
                 <div class="form-group">
-                    <select name="role" fromControlName="role" class="form-control" required>
+                    <select name="role" fromControlName="role" (change)="changeRole($event)" class="form-control" required>
                         <option value="">Soy un...</option>
                         <option value="ATHLETE">Atleta</option>
                         <option value="TRAINER">Entrenador</option>

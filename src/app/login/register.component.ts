@@ -47,7 +47,7 @@ export class RegisterComponent implements OnInit {
       password:'123456',
       password2:'123456',
       condiciones:true,
-      role: 'ATLHETE',
+      role: 'ATHLETE',
       telefono: 98989898
     });
 
@@ -84,11 +84,11 @@ export class RegisterComponent implements OnInit {
     if(this.forma.invalid){
       return;
     }
-    console.log(this.forma);
+
     if(this.forma.value.condiciones===false){
       this.uiService.mostrarMensaje('Error', 'Debe aceptar los terminos', 'warning');
       return;
-    } 
+    }
     
     let usuario= new User(
       this.forma.value.nombre,
@@ -104,5 +104,9 @@ export class RegisterComponent implements OnInit {
         console.log(response);
       }
     ); 
+  }
+
+  changeRole(event){
+    this.forma.value.role = event.target.value;
   }
 }
